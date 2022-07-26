@@ -12,9 +12,9 @@
 - src/components/xxx/assets: 存放自定义组件组件静态资源，比如 css、img等，此处存放的静态资源会经过webpack构建；
 - src/pages: uniapp 应用页面，开发uniapp自定义组件时仅用于充当预览展示页；
 - src/main.ts: uniapp 应用入口文件；
-- src/manifest.ts: uniapp 配置文件；
-- src/pages.json: uniapp 页面清单配置；
-- src/uni.css: uniapp 全局样式文件；
+- src/manifest.ts: uniapp 配置文件（配置应用名称、appid、logo、版本等打包信息）；
+- src/pages.json: uniapp 页面配置（配置页面路由、导航条、选项卡等页面类信息）；
+- src/uni.css: uniapp 全局样式文件（这里是uni-app内置的常用样式变量）；
 - amis.config.js: amis-widget-cli配置文件；
 - index.html: uniapp 页面模板（本地预览需要）；
 - vite.config.ts: uniapp 构建配置文件（vite 构建模式）；
@@ -23,6 +23,12 @@
 - build/registerPlugin.ts: 自定义组件插件构建入口；
 - build/registerRenderer.ts: 自定义组件渲染器构建入口；
 - build/index.ts: 自定义组件「web预览模块」构建入口（平台预览需要），build:h5 构建模式使用；
+
+### 相关开发文档
+- uni-app开发文档：[https://uniapp.dcloud.net.cn/](https://uniapp.dcloud.net.cn/)
+- vue3开发文档：[https://v3.cn.vuejs.org/](https://v3.cn.vuejs.org/)
+- 自定组件注册器：[vue3-aipage-widget](https://github.com/aisuda/vue3-aipage-widget)
+- 自定义组件开发工具：[amis-widget-cli](https://github.com/aisuda/amis-widget-cli)
 
 ### 开发 aipage-editor 自定义组件 注意事项
 - 开发小程序和快应用自定义组件时，静态资源（img、css等）请和自定义组件渲染器放同一个目录，比如：components/info-card/assets 存放 info-card 自定义组件的静态资源。方便后续动态注入自定义组件源码。
