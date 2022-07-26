@@ -2,6 +2,13 @@
   "name": "uni-custom-widget-template",
   "version": "1.0.0",
   "description": "aipage-editor uniapp版自定义组件模板（vue3技术栈）",
+  "keywords": [
+    "自定义组件注册器",
+    "uniapp自定义组件注册器",
+    "aipage-widget自定义组件",
+    "aipage-widget自定义插件"
+  ],
+  "author": "wibetter",
   "scripts": {
     "preview": "uni",
     "linkDebug": "UNI_BUILD_MODE=h5 uni build && amis linkDebug",
