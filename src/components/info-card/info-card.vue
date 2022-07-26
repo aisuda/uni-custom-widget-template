@@ -1,7 +1,6 @@
 <template>
-  <view>
-    <div class="news-card">
-      <div class="news-title">{{ title }}</div>
+  <div class="news-card">
+   <div class="news-title">{{ title }}</div>
       <div class="item-imgbox">
         <div
           class="news-img"
@@ -17,11 +16,9 @@
           {{ agreeDataFormat(comment_count) || 0 }} 评
         </div>
       </div>
-    </div>
-  </view>
+  </div>
 </template>
 <script>
-// import {defineComponent} from 'vue';
 export default {
   props: ['componentProperties', 'id'],
   data() {
