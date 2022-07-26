@@ -53,7 +53,7 @@ $ npm run linkDebug
 ```
 
 4. **build:h5: 构建自定义组件web预览模块**
-> build:h5模式：用于构建发布到 npm 中的文件，默认存放到 dist/build/h5 目录中。
+> build:h5模式：用于构建发布到 npm 中的文件，默认存放到 preview 目录中。
 ```bash
 $ npm run build:h5
 ```
