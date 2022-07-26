@@ -34,7 +34,7 @@ module.exports = {
   },
   linkDebug: {
     entry: { // 外链调试（爱速搭中预览本地自定义组件）
-      index: './src/linkDebug.js',
+      index: './build/linkDebug.js',
     },
     NODE_ENV: 'production',
     port: 80,
@@ -47,11 +47,12 @@ module.exports = {
     closeHotReload: true, // 是否关闭热更新
     debugMode: 'aipage-editor'
   },
-  // build2lib 和 build2esm 和 build:h5（UNI_BUILD_MODE=h5 uni build）功能相同
+  // build2lib 和 build:h5（UNI_BUILD_MODE=h5 uni build）功能相同
   build2lib: {
     entry: {
       // webpack构建入口
-      index: './src/register.ts', // 构建lib的入口
+      renderer: './build/registerRenderer.ts',
+      plugin: './build/registerPlugin.ts',
     },
     // 用于构建生产环境代码的相关配置信息
     NODE_ENV: 'production', // development / production
@@ -65,24 +66,5 @@ module.exports = {
     productionGzip: false,
     productionGzipExtensions: ['js', 'css', 'json'],
     bundleAnalyzerReport: false,
-  },
-  build2esm: {
-    input: resolve('src/register.ts'),
-    fileName: 'index',
-    outDir: './preview',
-    // 不将以下依赖打包到输出文件中
-    excludeList: [
-      'amis',
-      'amis-core',
-      'amis-ui',
-      'amis-editor',
-      'aipage-editor',
-      'vue3-aipage-editor',
-      'axios',
-      'jquery',
-      'react',
-      'react-dom',
-      'vue',
-    ],
   }
 };

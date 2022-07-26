@@ -31,14 +31,14 @@ export default defineConfig(({ command, mode }) => {
         //mode: 'development', // 'development'（开发模式），'production'（生产模式）
         ...commonConfig,
         build: {
-          // outDir: 'preview',
           // https://vitejs.dev/config/build-options.html#build-minify
           minify: false,
-          rollupOptions: { // https://rollupjs.org/guide/en/#big-list-of-options
-            // external: {'react': 'commonjs2 react', 'vue': 'commonjs2 vue'}, 
+          rollupOptions: {
+            // https://rollupjs.org/guide/en/#big-list-of-options
             external: ['react', 'vue'], // 在构建中排除的依赖项
             output: {
               // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+              dir: 'preview', // 输出构建后文件的目录
               globals: {
                 vue: 'vue',
                 react: 'react'
@@ -47,10 +47,10 @@ export default defineConfig(({ command, mode }) => {
             // input: './src/register.ts', 
           },
           lib: {
-            entry: './src/register.ts',
-            formats: ['umd', 'es'],
-            name: 'customWidget', // 自定义组件名字
-            fileName: (format) => `index.${format}.js`, // 输出文件名
+            entry: './build/index.js', // 构建自定组件入口文件
+            formats: ['umd'],
+            name: 'customRenderer', // 自定义组件名字
+            fileName: (format) => `index.${format}.js`,
           },
         }
       };

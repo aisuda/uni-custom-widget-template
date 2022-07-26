@@ -1,6 +1,7 @@
 /**
  * @file 编辑器扩展, 增加自定义插件（组件物料面板展示需要）
  */
+// @ts-ignore
 import { registerPlugin } from 'vue3-aipage-widget';
 
 const InfoCardPlugin = {
@@ -120,6 +121,7 @@ const InfoCardPlugin = {
   },
 };
 
+// 注册自定义插件（aipage-editor组件物料面板需要）
 registerPlugin(InfoCardPlugin);
 
 export default InfoCardPlugin;

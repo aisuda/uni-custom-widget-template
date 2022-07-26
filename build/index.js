@@ -1,0 +1,2 @@
+import './registerPlugin';
+import './registerRenderer';
