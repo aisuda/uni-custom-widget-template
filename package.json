@@ -1,6 +1,7 @@
 {
   "name": "uni-custom-widget-template",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "aipage-editor uniapp版自定义组件模板（vue3技术栈）",
   "scripts": {
     "preview": "uni",
     "linkDebug": "UNI_BUILD_MODE=h5 uni build && amis linkDebug",
