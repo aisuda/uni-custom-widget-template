@@ -48,7 +48,7 @@ export default {
       return (
         this.componentProperties &&
         this.componentProperties.data &&
-        this.componentProperties.data.img_count
+        this.componentProperties.data.img_count || 1
       );
     },
     comment_count() {

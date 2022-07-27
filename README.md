@@ -8,7 +8,6 @@
 - src/components: 存放自定义组件源码（vue3技术栈）；
 - src/components/info-card/info-card.jsx: 自定义组件内容文件；
 - src/components/info-card/plugin.jsx: 用于注册一个amis-editor插件，注册成功后编辑器左侧组件面板中会展示；
-- src/react-widget/index.js: 用于注册一个amis渲染器，注册成功后编辑器画布区中才会正常展示自定义组件内容；
 - src/components/xxx/assets: 存放自定义组件组件静态资源，比如 css、img等，此处存放的静态资源会经过webpack构建；
 - src/pages: uniapp 应用页面，开发uniapp自定义组件时仅用于充当预览展示页；
 - src/main.ts: uniapp 应用入口文件；
