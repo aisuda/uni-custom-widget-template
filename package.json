@@ -43,6 +43,36 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "format": "prettier --write \"src/**/**/*.{js,jsx,ts,tsx,vue,scss,json}\""
   },
+  "files": [
+    "web/*",
+    "src/components/*"
+  ],
+  "aipage-widgets": [
+    {
+      "name": "uni-info-card",
+      "framework": "vue3",
+      "type": "uni-info-card",
+      "entry": "/web/renderer.umd",
+      "files": [
+        "/dist/infoCard.css"
+      ],
+      "editorPlugin": {
+        "name": "uni-info-card-plugin",
+        "description": "信息展示卡片",
+        "pluginEntry": "/web/plugin.umd",
+        "tag": [
+          "uni小程序组件"
+        ],
+        "sort": 100
+      }
+    },
+    {
+      "name": "uni-info-card",
+      "framework": "app",
+      "type": "uni-info-card",
+      "srcDir": "/src/components/info-card"
+    }
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -77,7 +107,7 @@
     "vue": "^3.2.37",
     "vue-i18n": "^9.1.9",
     "vuex": "^4.0.2",
-    "vue3-aipage-widget": "^1.0.3"
+    "vue3-aipage-widget": "^1.0.5"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.0.4",

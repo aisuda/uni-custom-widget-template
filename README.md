@@ -39,20 +39,21 @@
 $ npm i 或者 yarn
 ```
 
-2. **preview: 组件预览模式（带热更新）**
-> preview模式：用于预览自定义组件内容。
+2. **preview: 小程序自定义组件预览模式（带热更新）**
+> H5预览模式：用于本地预览小程序自定义组件内容。
 ```bash
 $ npm run preview
 ```
 
-3. **linkDebug: 外链调试（amis-saas中预览自定义组件）**
-> linkDebug模式：用于在amis-saas中预览和调试自定义组件。
+3. **linkDebug: 外链调试（爱速搭平台预览小程序自定义组件）**
+> linkDebug模式：用于在爱速搭平台中预览和调试小程序自定义组件。
 ```bash
 $ npm run linkDebug
 ```
 
 4. **build:h5: 构建自定义组件web预览模块**
-> build:h5模式：用于构建发布到 npm 中的文件，默认存放到 preview 目录中。
+> build:h5模式：用于构建发布到 npm 中的文件，默认存放到 web 目录中。
+> 备注: build:h5 构建模式 会将渲染器和自定义插件打包成一个js脚本，不利于拆包（待优化）。
 ```bash
 $ npm run build:h5
 ```
@@ -65,29 +66,34 @@ $ npm run build2lib
 ```
 
 6. **package.json添加自定义组件信息，导入组件扩展包时需要**
-> package.json 中添加 amis-widgets 字段，用于放置当前自定义组件信息，有这个 amis-widgets 字段才能被识别为自定义组件扩展包。
+> package.json 中添加 aipage-widgets 字段，用于放置当前自定义组件信息，有这个 aipage-widgets 字段才能被识别为自定义组件扩展包。
 
 ```bash
   ...
-    "amis-widgets": [
+    "aipage-widgets": [
     {
-      "name": "uni-info-card", // 自定义组件名称，必填项
+      "name": "uni-info-card", // H5自定义组件名称，必填项
       "framework": "vue3", // 技术栈类型，非必填项，默认为 react 技术栈
-      "usage": "renderer", // 渲染器类型，非必填项，默认为 renderer
       "type": "uni-info-card", // 自定义组件类型，必填项，同一应用下不允许有重复的自定义组件类型
-      "entry": "/preview/renderer.umd", // 自定义组件入口文件路径，必填项
+      "entry": "/web/renderer.umd", // 自定义组件入口文件路径，必填项
       "files": [  // 自定义组件依赖资源文件路径，非必填项
         "/dist/infoCard.css"
       ],
       "editorPlugin": {  // amis-editor自定义插件信息
         "name": "uni-info-card-plugin", // 自定义插件名称，在编辑器左侧组件面板作为title展示，必填项
         "description": "信息展示卡片", // 自定义插件描述，在编辑器左侧组件面板作为描述信息展示，必填项
-        "pluginEntry": "/preview/plugin.umd", // 自定义插件的入口文件，必填项
+        "pluginEntry": "/web/plugin.umd", // 自定义插件的入口文件，必填项
         "tag": [  // 自定义插件的分类，必填项
-          "展示"
+          "uni小程序组件"
         ],
         "sort": 100 // 自定义插件的排序，非必填项
       }
+    },
+    {
+      "name": "uni-info-card", // 小程序自定义组件名称，必填项
+      "framework": "app", // 快应用技术栈类型，必填项
+      "type": "uni-info-card", // 自定义组件类型，必填项，同一应用下不允许有重复的自定义组件类型
+      "srcDir": "/src/components/info-card", // 快应用自定义组件根目录
     },
     ... // 其他自定义组件
   ],
