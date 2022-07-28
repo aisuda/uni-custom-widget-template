@@ -93,7 +93,7 @@ $ npm run build2lib
       "name": "uni-info-card", // 小程序自定义组件名称，必填项
       "framework": "app", // 快应用技术栈类型，必填项
       "type": "uni-info-card", // 自定义组件类型，必填项，同一应用下不允许有重复的自定义组件类型
-      "srcDir": "/src/components/info-card", // 快应用自定义组件根目录
+      "entry": "/src/components/info-card", // 快应用自定义组件根目录
     },
     ... // 其他自定义组件
   ],

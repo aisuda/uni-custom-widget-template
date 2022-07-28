@@ -70,7 +70,7 @@
       "name": "uni-info-card",
       "framework": "app",
       "type": "uni-info-card",
-      "srcDir": "/src/components/info-card"
+      "entry": "/src/components/info-card"
     }
   ],
   "husky": {
