@@ -5,11 +5,11 @@
 import { registerPlugin } from 'vue3-aipage-widget';
 
 const InfoCardPlugin = {
-  name: 'uniapp信息卡片',
-  description: '信息展示卡片',
+  name: '信息卡片',
+  description: 'uniapp版信息展示卡片',
   componentId: 'uni-info-card',
   id: 'uni-info-card',
-  tags: ['uni小程序组件'], // 组件分类
+  tags: ['跨端组件'], // 组件分类
   pluginIcon: 'cards-plugin',
   order: 1, // 展示顺序（从小到大展示）
   type: 'element', // 渲染器类型

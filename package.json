@@ -49,27 +49,24 @@
   ],
   "aipage-widgets": [
     {
-      "name": "uni-info-card",
-      "framework": "vue3",
       "type": "uni-info-card",
+      "framework": "vue3",
+      "description": "信息展示卡片",
       "entry": "/web/renderer.umd",
       "files": [
-        "/dist/infoCard.css"
+        "/dist/renderer.css"
       ],
       "editorPlugin": {
-        "name": "uni-info-card-plugin",
-        "description": "信息展示卡片",
         "pluginEntry": "/web/plugin.umd",
         "tag": [
-          "uni小程序组件"
+          "跨端组件"
         ],
         "sort": 100
       }
     },
     {
-      "name": "uni-info-card",
-      "framework": "app",
       "type": "uni-info-card",
+      "framework": "uniapp",
       "entry": "/src/components/info-card"
     }
   ],
@@ -115,7 +112,7 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040820220424001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040820220424001",
     "vite": "^2.9.9",
-    "amis-widget-cli": "^2.0.5-vue3-beta.1",
+    "amis-widget-cli": "^2.0.5-vue3-beta.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "prettier": "^2.0.5",
