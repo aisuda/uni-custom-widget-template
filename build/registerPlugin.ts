@@ -13,7 +13,7 @@ const InfoCardPlugin = {
   pluginIcon: 'cards-plugin',
   order: 1, // 展示顺序（从小到大展示）
   type: 'element', // 渲染器类型
-  device: ['app'], // 设置类型，目前支持3种类型: pc、mobile、app
+  device: ['mobile', 'app'], // 设置类型，目前支持3种类型: pc、mobile、app
   docLink: '',
   demoProperties: {
     componentId: 'uni-info-card',
