@@ -77,7 +77,7 @@ $ npm run build2lib
       "description": "信息展示卡片", // 自定义组件描述，在编辑器左侧组件面板作为描述信息展示，必填项
       "entry": "/web/renderer.umd", // 自定义组件入口文件路径，必填项
       "files": [  // 自定义组件依赖资源文件路径，非必填项
-        "/dist/infoCard.css"
+        "/web/infoCard.css"
       ],
       "editorPlugin": {  // amis-editor自定义插件信息
         "pluginEntry": "/web/plugin.umd", // 自定义插件的入口文件，必填项
