@@ -2,7 +2,7 @@
 // @ts-ignore
 import { registerRenderer } from 'vue3-aipage-widget';
 // @ts-ignore
-import InfoCard from '../src/components/info-card/info-card';
+import InfoCard from '../src/components/uni-info-card/uni-info-card';
 
 registerRenderer(InfoCard, {
   type: 'uni-info-card',

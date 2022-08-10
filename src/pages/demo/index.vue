@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import InfoCard from '../../components/info-card/info-card.vue';
+import InfoCard from '../../components/uni-info-card/uni-info-card.vue';
 const title = ref('Hello');
 </script>
 

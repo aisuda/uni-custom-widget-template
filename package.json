@@ -1,6 +1,6 @@
 {
   "name": "uni-custom-widget-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "aipage-editor uniapp版自定义组件模板（vue3技术栈），用于开发小程序自定义组件。",
   "keywords": [
     "自定义组件注册器",
@@ -68,7 +68,7 @@
     {
       "type": "uni-info-card",
       "framework": "uniapp",
-      "entry": "/src/components/info-card"
+      "entry": "/src/components/uni-info-card"
     }
   ],
   "husky": {
