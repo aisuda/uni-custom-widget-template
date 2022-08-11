@@ -1,6 +1,6 @@
 {
   "name": "uni-custom-widget-template",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "aipage-editor uniapp版自定义组件模板（vue3技术栈），用于开发小程序自定义组件。",
   "keywords": [
     "自定义组件注册器",
@@ -105,7 +105,7 @@
     "vue": "^3.2.37",
     "vue-i18n": "^9.1.9",
     "vuex": "^4.0.2",
-    "vue3-aipage-widget": "^1.0.5"
+    "vue3-aipage-widget": "^1.0.6"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.0.4",
