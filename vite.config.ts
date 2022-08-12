@@ -50,7 +50,7 @@ export default defineConfig(({ command, mode }) => {
             entry: './build/index.js', // 构建自定组件入口文件
             formats: ['umd'],
             name: 'customRenderer', // 自定义组件名字
-            fileName: (format) => `index.${format}.js`,
+            fileName: (format) => `renderer.${format}.js`,
           },
         }
       };
