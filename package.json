@@ -11,7 +11,8 @@
   "author": "wibetter",
   "scripts": {
     "preview": "uni",
-    "linkDebug": "UNI_BUILD_MODE=h5 uni build && amis linkDebug",
+    "linkDebug": "amis build2lib && amis linkDebug",
+    "linkDebugUni": "UNI_BUILD_MODE=h5 uni build && amis linkDebug",
     "build2lib": "amis build2lib",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
