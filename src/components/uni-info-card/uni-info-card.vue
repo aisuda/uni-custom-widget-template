@@ -1,21 +1,21 @@
 <template>
   <div class="news-card">
-   <div class="news-title">{{ title }}</div>
-      <div class="item-imgbox">
-        <div
-          class="news-img"
-          :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-        ></div>
-        <div v-if="img_count > 0" class="img-count">
-          {{ img_count }}
-        </div>
+    <div class="news-title">{{ title }}</div>
+    <div class="item-imgbox">
+      <div
+        class="news-img"
+        :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+      ></div>
+      <div v-if="img_count > 0" class="img-count">
+        {{ img_count }}
       </div>
-      <div class="news-info">
-        <div class="left media-mark">爱速搭 · 低代码平台</div>
-        <div class="cmt-num right">
-          {{ agreeDataFormat(comment_count) || 0 }} 评
-        </div>
+    </div>
+    <div class="news-info">
+      <div class="left media-mark">爱速搭 · 低代码平台</div>
+      <div class="cmt-num right">
+        {{ agreeDataFormat(comment_count) || 0 }} 评
       </div>
+    </div>
   </div>
 </template>
 <script>
@@ -46,9 +46,10 @@ export default {
     },
     img_count() {
       return (
-        this.componentProperties &&
-        this.componentProperties.data &&
-        this.componentProperties.data.img_count || 1
+        (this.componentProperties &&
+          this.componentProperties.data &&
+          this.componentProperties.data.img_count) ||
+        1
       );
     },
     comment_count() {
@@ -79,7 +80,7 @@ export default {
   },
 };
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .left {
   float: left;
 }
