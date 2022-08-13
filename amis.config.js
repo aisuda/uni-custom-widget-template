@@ -27,7 +27,7 @@ module.exports = {
     allowList: [], // ignoreNodeModules为true时生效
     externals: [],
     projectDir: ['src'],
-    template: resolve('./index.html'), // 使用自己的html模板
+    // template: resolve('./index.html'), // 使用自己的html模板
     cssLoaderUrl: true,
     moduleRules: [], // 用于配置自定义loaders
     plugins: [], // 用于配置自定义plugins // uni()
@@ -46,25 +46,5 @@ module.exports = {
     cssSourceMap: true,
     closeHotReload: true, // 是否关闭热更新
     debugMode: 'aipage-editor'
-  },
-  // build2lib 和 build:h5（UNI_BUILD_MODE=h5 uni build）功能相同
-  build2lib: {
-    entry: {
-      // webpack构建入口
-      renderer: './build/registerRenderer.ts',
-      plugin: './build/registerPlugin.ts',
-    },
-    // 用于构建生产环境代码的相关配置信息
-    NODE_ENV: 'production', // development / production
-    libraryName: 'aipageWidget', // 构建第三方功能包时最后导出的引用变量名
-    assetsRoot: resolve('./web'), // 打包后的文件绝对路径（物理路径）
-    assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
-    assetsSubDirectory: '', // 资源引用二级路径
-    ignoreNodeModules: true, // 打包时是否忽略 node_modules
-    // allowList: ['jquery', 'vue'], // ignoreNodeModules为true时生效
-    productionSourceMap: false,
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css', 'json'],
-    bundleAnalyzerReport: false,
   }
 };

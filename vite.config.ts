@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
+const path = require('path');
 /**
  * vite 配置文件
  * 备注: 公共配置 commonConfig 中的配置项大部分是默认配置项，此处列出来是为了方便开发时随时调整
@@ -32,7 +33,7 @@ export default defineConfig(({ command, mode }) => {
         ...commonConfig,
         build: {
           // https://vitejs.dev/config/build-options.html#build-minify
-          minify: false,
+          minify: true,
           rollupOptions: {
             // https://rollupjs.org/guide/en/#big-list-of-options
             external: ['react', 'vue'], // 在构建中排除的依赖项
@@ -42,16 +43,18 @@ export default defineConfig(({ command, mode }) => {
               globals: {
                 vue: 'vue',
                 react: 'react'
-              }
+              },
+              // format: 'amd',
             }
-            // input: './src/register.ts', 
           },
           lib: {
-            entry: './build/index.js', // 构建自定组件入口文件
+            entry: path.resolve(__dirname, `./build/${ process.env.UNI_BUILD_LIB || 'registerRenderer'}.ts`), // 构建自定组件入口文件
             formats: ['umd'],
-            name: 'customRenderer', // 自定义组件名字
-            fileName: (format) => `renderer.${format}.js`,
+            name: process.env.UNI_BUILD_LIB || 'registerRenderer', // 自定义组件名字
+            fileName: (format) => `${process.env.UNI_BUILD_LIB || 'registerRenderer'}.${format}.js`,
+            style: 'renderer'
           },
+          // cssCodeSplit: false, // https://vitejs.cn/config/#build-csscodesplit
         }
       };
     } else {

@@ -66,6 +66,6 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "suppressImplicitAnyIndexErrors": true /* Suppress --noImplicitAny errors for indexing objects lacking index signatures. See issue #1232 for more details. */
   },
-  "include": ["src", "type.d.ts", "@dcloudio/types", "commitlint.config.js", "build/linkDebug.js", "build/registerRenderer.ts", "build/registerPlugin.ts"],
+  "include": ["src", "type.d.ts", "@dcloudio/types", "commitlint.config.js", "build/linkDebug.js", "build/renderer.ts", "build/plugin.ts"],
   "exclude": ["node_modules"]
 }
