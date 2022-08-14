@@ -6,8 +6,7 @@
 - dist: uniapp构建后文件存放目录；
 - web: 自定义组件web预览模块（发布NPM自定义组件需要）；
 - src/components: 存放自定义组件源码（vue3技术栈）；
-- src/components/info-card/info-card.jsx: 自定义组件内容文件；
-- src/components/info-card/plugin.jsx: 用于注册一个amis-editor插件，注册成功后编辑器左侧组件面板中会展示；
+- src/components/uni-info-card/uni-info-card.vue: 自定义组件内容文件，使用uniapp开发自定义组件请遵循(easycom组件规范)[https://uniapp.dcloud.net.cn/component/#easycom%E7%BB%84%E4%BB%B6%E8%A7%84%E8%8C%83]；
 - src/components/xxx/assets: 存放自定义组件组件静态资源，比如 css、img等，此处存放的静态资源会经过webpack构建；
 - src/pages: uniapp 应用页面，开发uniapp自定义组件时仅用于充当预览展示页；
 - src/main.ts: uniapp 应用入口文件；
@@ -18,8 +17,8 @@
 - index.html: uniapp 页面模板（本地预览需要）；
 - vite.config.ts: uniapp 构建配置文件（vite 构建模式）；
 - build: 存放打包&构建入口文件；
-- build/linkDebug.js: 用于本地「linkDebug」调试自定义组件；
-- build/plugin.ts: 自定义组件插件构建入口；
+- build/linkDebug.js: 用于本地「linkDebug」调试自定义组件，可在爱速搭编辑器中预览本地自定义组件；
+- build/plugin.ts: 自定义组件插件构建入口，用于注册一个amis-editor插件，注册成功后编辑器左侧组件面板中会展示；
 - build/renderer.ts: 自定义组件渲染器构建入口；
 
 ### 相关开发文档
