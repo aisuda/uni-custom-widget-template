@@ -7,8 +7,8 @@ import { registerPlugin } from 'vue3-aipage-widget';
 const InfoCardPlugin = {
   name: '信息卡片',
   description: 'uniapp版信息展示卡片',
-  componentId: 'uni-info-card',
-  id: 'uni-info-card',
+  componentId: 'uni-info-card-v2',
+  id: 'uni-info-card-v2',
   tags: ['跨端组件'], // 组件分类
   pluginIcon: 'cards-plugin',
   order: 1, // 展示顺序（从小到大展示）
@@ -16,7 +16,7 @@ const InfoCardPlugin = {
   device: ['mobile', 'app'], // 设置类型，目前支持3种类型: pc、mobile、app
   docLink: '',
   demoProperties: {
-    componentId: 'uni-info-card',
+    componentId: 'uni-info-card-v2',
     type: 'element',
     componentProperties: {
       data: {},

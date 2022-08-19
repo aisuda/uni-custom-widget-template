@@ -51,10 +51,10 @@ export default defineConfig(({ command, mode }) => {
             }
           },
           lib: {
-            entry: path.resolve(__dirname, `./build/${ UNI_BUILD_LIB || 'registerRenderer'}.ts`), // 构建自定组件入口文件
+            entry: path.resolve(__dirname, `./build/${ UNI_BUILD_LIB || 'renderer'}.ts`), // 构建自定组件入口文件
             formats: ['umd'],
-            name: UNI_BUILD_LIB || 'registerRenderer', // 自定义组件名字
-            fileName: (format) => `${UNI_BUILD_LIB || 'registerRenderer'}.${format}.js`,
+            name: UNI_BUILD_LIB || 'renderer', // 自定义组件名字
+            fileName: (format) => `${UNI_BUILD_LIB || 'renderer'}.${format}.js`,
             style: 'renderer'
           },
           // cssCodeSplit: false, // https://vitejs.cn/config/#build-csscodesplit
